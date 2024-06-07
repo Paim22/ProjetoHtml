@@ -4,7 +4,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br"> 
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style/main.css">
@@ -43,7 +43,7 @@
 </div>
 
 <div id="corpo-form">
-    <h1>Alterar Informações de Login</h1>
+    <h1>Alterar Informações de Login de Usuário</h1>
     <form method="POST">
         <input type="text" name="usuario_atual" placeholder="Usuário Atual" required>
         <input type="email" name="email_atual" placeholder="E-mail Atual">
@@ -71,7 +71,7 @@ if (isset($_POST['alterar'])) {
     $novoTelefone = addslashes($_POST['telefone']);
 
     if (!empty($usuarioAtual) && !empty($emailAtual) && !empty($senhaAtual) && !empty($telefoneAtual)) {
-        $usuario->conectar("projeto_login", "localhost", "root", "");
+        $usuario->conectar("projeto_login", "127.0.0.1", "root", "");
         if ($usuario->msgERRO == "") {
             // Verificar se o usuário atual existe
             $infoAtual = $usuario->buscarInformacoes($usuarioAtual, $emailAtual, $senhaAtual, $telefoneAtual);
