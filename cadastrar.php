@@ -64,7 +64,7 @@ if (isset($_POST['nome'])) {
     $isAdmin = isset($_POST['admin']) ? $_POST['admin'] : 0; // Padrão como não admin caso não selecionado
     }
     
-        $u->conectar("projeto_login", "127.l.0.1", "root", "");
+        $u->conectar("projeto_login", "localhost", "root", "");
 
         if ($u->msgERRO == "") {
 
