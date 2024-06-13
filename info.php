@@ -1,7 +1,7 @@
 <?php
 
 // Conecta ao banco de dados
-$pdo = new PDO("mysql:host=localhost;dbname=projeto_login", "root", ""); // Lembre-se de alterar as credenciais se necessário
+$pdo = new PDO("mysql:host=localhost;dbname=projeto_login", "root", "");
 
 // Consulta para selecionar todos os registros da tabela usuarios
 $stmt = $pdo->query("SELECT * FROM usuarios");
