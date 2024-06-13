@@ -71,7 +71,7 @@ if (isset($_POST['alterar'])) {
     $novoTelefone = addslashes($_POST['telefone']);
 
     if (!empty($usuarioAtual) && !empty($emailAtual) && !empty($senhaAtual) && !empty($telefoneAtual)) {
-        $usuario->conectar("projeto_login", "127.0.0.1", "root", "");
+        $usuario->conectar("projeto_login", "localhost", "root", "");
         if ($usuario->msgERRO == "") {
             // Verificar se o usuário atual existe
             $infoAtual = $usuario->buscarInformacoes($usuarioAtual, $emailAtual, $senhaAtual, $telefoneAtual);
