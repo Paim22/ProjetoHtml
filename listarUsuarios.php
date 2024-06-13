@@ -4,7 +4,7 @@ require_once 'classes/Usuarios.php';
 // Instancia a classe Usuarios
 $usuarios = new Usuarios();
 
-// Conecta ao banco de dados (substitua pelos seus dados de conexão)
+// Conecta ao banco de dados
 $usuarios->conectar("projeto_login", "localhost", "root", "");
 
 // Obtém os usuários do banco de dados
